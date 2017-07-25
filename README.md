@@ -1,3 +1,5 @@
+>  [moke](http://coding.imooc.com/learn/list/113.html)上的课程,个人改进中，仅供学习用途,不做商业用途,出现任何法律纠纷,概不负责
+
 # vueshop
 
 > A Vue.js project
