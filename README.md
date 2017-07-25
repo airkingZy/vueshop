@@ -27,6 +27,9 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 在mongodb 建立 db_demo数据库,创建2个集合一个是goods和users
 导入目录下的2个.json
 
+## nginx配置
+需要把/users和/goods和/cart转发到http://www.localhost:3000
+
 ## 进度
 
 1. 轮播图（1/1）
