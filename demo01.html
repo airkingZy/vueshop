@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    .clg{
+        background: black;
+        color: white;
+      padding: 10px 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="clg" id="clg"></div>
+</body>
+<script>
+  let checkLogin = function(){
+    return new Promise(function (resolve,reject){
+      let flag = document.cookie.indexOf("userId")>-1?true:false;
+      if(flag=true){
+        resolve({
+          status:0,
+          resulr:true
+        })
+      }
+      else{
+        reject("error");
+      }
+    })
+  }
+
+  //getUserInfo封装
+  let getUserInfo = ()=>{
+    return new Promise ((resolve,reject)=>{
+      let userinfo = {
+        userId : '101'
+      }
+      resolve(userinfo);
+    })
+  }
+
+  checkLogin().then((res=>{
+    console.log('login success');
+    return getUserInfo()
+  })).catch((error)=>{
+    console.log(`errs:${error}`)
+  }).then(res2=>{
+    console.log(`userid:${res2.userId}`)
+  })
+
+  //输出
+//  login success
+//  userid:101
+
+  Promise.all([checkLogin(),getUserInfo()]).then(([res1,res2])=>{
+    console.log(`result1:${res1.resulr},result2:${res2.userId}`)
+  })
+</script>
+</html>
