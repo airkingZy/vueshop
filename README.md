@@ -19,3 +19,16 @@ npm run build --report
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+## 数据库mongodb
+
+在mongodb 建立 db_demo数据库,创建2个集合一个是goods和users
+导入目录下的2个.json
+
+## 进度
+
+1. 轮播图（1/1）
+2. 用户注册的正则（0/1）
+3. 用element.ui做后台，实现商品的添加 （0/1）
+4. 商品的分类 （0/1）
+5. 用户的订单查询 （0/1）
